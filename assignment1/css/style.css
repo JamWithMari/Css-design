@@ -2,38 +2,69 @@
 html{
     padding: 0;
     margin: 0;
+    scroll-behavior:smooth;
 }
 
 body{
     background-image: url(/images/Forever\ Story.jpg);
     color: #A3BFF1;
-    font-family: fantasy;
-    backdrop-filter: blur(5px);
+    font-family: "Permanent Marker", serif;
+    backdrop-filter: blur(10px);
     margin: 0;
     display: flex;
     justify-content: center;
+    padding: 3em;
+    background-size: contain;
     
     
 }
 /*I wanted to make the font colour blue*/
 .content-wrapper{
+    padding-bottom: 2.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: #221D1D;
     width: 80%;
-    align-self: center;
+    font-size: 1.2em;
     
+    
+}
+
+header{
+    font-size: 1.7em;
 }
 
 iframe{
     margin-bottom: 1em;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+figure{
+    margin-bottom: 4em;
 }
 
 main{
+
+    padding: 0em 1em 2.5em 1em;
     background-color: #9E8A90;
-    color: #f8f8ff;
-    width: 80%;
+    color: white;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    height: 800px;
+
 }
 
+.layered{
+    text-shadow: -7px 0 0 red;
+}
+
+#whisper{
+    font-size: 1.2em;
+    color: lightgrey;
+}
+
+.ref{
+    font-family: "Electrolize", serif;
+}
