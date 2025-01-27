@@ -1,0 +1,39 @@
+/* i want to remove the default padding around the html */
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(/images/Forever\ Story.jpg);
+    color: #A3BFF1;
+    font-family: fantasy;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+/*I wanted to make the font colour blue*/
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #221D1D;
+    width: 80%;
+    align-self: center;
+    
+}
+
+iframe{
+    margin-bottom: 1em;
+}
+
+main{
+    background-color: #9E8A90;
+    color: #f8f8ff;
+    width: 80%;
+}
+
