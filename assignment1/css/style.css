@@ -4,9 +4,9 @@ html{
     margin: 0;
     scroll-behavior:smooth;
 }
-
+/* we going to use permanent marker only for the JId the main artist everything else  will have it's own font */
 body{
-    background-image: url(/images/Forever\ Story.jpg);
+    background-image: url(../images/Forever-Story.jpg);
     color: #A3BFF1;
     font-family: "Permanent Marker", serif;
     backdrop-filter: blur(10px);
@@ -28,10 +28,11 @@ body{
     background-color: #221D1D;
     width: 80%;
     font-size: 1.2em;
-    
+  
+}
+figcaption{
     
 }
-
 header{
     font-size: 1.7em;
 }
@@ -58,13 +59,47 @@ main{
 
 .layered{
     text-shadow: -7px 0 0 red;
+    font-size: 1.5em;
 }
 
 #whisper{
-    font-size: 1.2em;
-    color: lightgrey;
+    font-size: 0.85em;
+    padding: 0.25em;
+    color: lightgoldenrodyellow;
 }
 
 .ref{
     font-family: "Electrolize", serif;
+    color: lightgreen;
+}
+
+.verse3-flow2{
+    margin-top: 2em;
+    font-family: "Ga Maamli", serif;
+    font-size: 1.1em;
+}
+
+.deep-voice{
+    font-family: "Permanent Marker", serif;
+    color: #58ecff;
+    font-size: 1.3em;
+}
+
+.bg-voice{
+    color: grey;
+    background-color: lightgrey;
+    padding: 0.25em;
+    border-radius: 2em;
+}
+
+.intro{
+    font-family: "Libre Franklin", serif;
+    font-weight: 600;
+}
+
+.outro{
+    font-family: "Kablammo", serif;
+    color: darkred;
+    font-size: 1.2em;
+    margin-top: 2em;
 }
