@@ -71,12 +71,15 @@ main{
 .ref{
     font-family: "Electrolize", serif;
     color: lightgreen;
+    font-size: 1.2rem;
 }
 
 .verse3-flow2{
     margin-top: 2em;
     font-family: "Ga Maamli", serif;
     font-size: 1.1em;
+    color: #c6a589;
+    text-shadow: 2px 2px 2px rgb(46, 46, 46);
 }
 
 .deep-voice{
@@ -95,6 +98,8 @@ main{
 .intro{
     font-family: "Libre Franklin", serif;
     font-weight: 600;
+    color: rgb(131, 82, 185);
+    text-shadow: 3px 3px 2px #A3BFF1;
 }
 
 .outro{
