@@ -9,7 +9,7 @@ body{
     background-image: url(../images/Forever-Story.jpg);
     color: #A3BFF1;
     font-family: "Permanent Marker", serif;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /*the background is a bit pixelated so applying a blur will medigate it*/
     margin: 0;
     display: flex;
     justify-content: center;
@@ -18,7 +18,9 @@ body{
     
     
 }
-/*I wanted to make the font colour blue*/
+/* adding a border around the children of the body which is why there's the content-wrapper dig  this is to seperate the content 
+from the background*/
+
 .content-wrapper{
     padding-bottom: 2.5em;
     display: flex;
@@ -30,9 +32,7 @@ body{
     font-size: 1.2em;
   
 }
-figcaption{
-    
-}
+
 header{
     font-size: 1.7em;
 }
@@ -42,8 +42,18 @@ iframe{
     aspect-ratio: 16 / 9;
     width: 100%;
 }
+
 figure{
-    margin-bottom: 4em;
+    
+    width: 100%;
+}
+
+/* putting a div around the 2 figure elements so i can put them side by side */
+.figures{
+    display: flex;
+    align-content: center;
+    margin-bottom: 4em; /* this is to give space between the figures and the main content */
+
 }
 
 main{
@@ -57,17 +67,22 @@ main{
 
 }
 
+/* there's multiple people saying the verses so i'm going to give them a text shadow to show that more than 1 person's talking
+also making the font size red and a bit bigger to make it stand out like it does audio wise in the song */
 .layered{
     text-shadow: -7px 0 0 red;
     font-size: 1.5em;
 }
 
+/* The whisper is meant to be smaller than the main text so i'm going to make it 0.85em, the different colour is to make the difference more obvious */
 #whisper{
     font-size: 0.85em;
     padding: 0.25em;
     color: lightgoldenrodyellow;
 }
 
+/* with the ref wanted to give the effect of a tv football game the lightgreen text and font give off the effect
+that it's a broadcast of some sort */ 
 .ref{
     font-family: "Electrolize", serif;
     color: lightgreen;
@@ -81,7 +96,8 @@ main{
     color: #ffc18b;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
-
+/*with the deep voice i just wanted to make it stand out compared to the regular font just a bit more so we using 1.3em instead of 1.2em
+and the colour is to make the change obvious to people reading the lyrics */
 .deep-voice{
     font-family: "Permanent Marker", serif;
     color: #58ecff;
@@ -90,12 +106,13 @@ main{
 
 .bg-voice{
     color: grey;
-    background-color: lightgrey;
+    background-color: white;
     padding: 0.25em;
     border-radius: 2em;
     text-shadow: none;
 }
-
+/* used a different font to signify the change in speaker and added a bit more weight to the font so it catches 
+the eye more  */
 .alt-speaker{
     font-family: "libre franklin", sans-serif;
     font-style: italic;
@@ -103,6 +120,14 @@ main{
     font-weight: 600;
 }
 
+#jid img{
+    width: 100%;
+    height: auto;
+    
+}
+
+/* The outro sounds simmilar to a horror movie so making it darkred felt like the right decision
+the second thing is the a playful font i think it fits pretty well */
 .outro{
     font-family: "Kablammo", serif;
     color: darkred;
