@@ -78,8 +78,8 @@ main{
     margin-top: 2em;
     font-family: "Ga Maamli", serif;
     font-size: 1.1em;
-    color: #c6a589;
-    text-shadow: 2px 2px 2px rgb(46, 46, 46);
+    color: #ffc18b;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 .deep-voice{
@@ -93,13 +93,14 @@ main{
     background-color: lightgrey;
     padding: 0.25em;
     border-radius: 2em;
+    text-shadow: none;
 }
 
-.intro{
-    font-family: "Libre Franklin", serif;
+.alt-speaker{
+    font-family: "libre franklin", sans-serif;
+    font-style: italic;
+    color: #483977;
     font-weight: 600;
-    color: rgb(131, 82, 185);
-    text-shadow: 3px 3px 2px #A3BFF1;
 }
 
 .outro{
