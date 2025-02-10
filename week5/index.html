@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This week we will be looking at some examples of how to use different interface components">
+    <title>Interface Components Part One</title>
+    <meta name="robots" content="noindex, nofollow">
+    <!-- add fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- add JS if needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/custom-js.js"></script>
+    <!-- add CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- add font awesome if needed -->
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+  </head>
+  <body class="home-page">
+    <header>
+      <div>
+        <a class="default-logo" href="index.html"><img src="./img/restaurant-logo-light.png" alt="header logo"></a>
+        <a class="scrolled-logo" href="index.html"><img src="./img/restaurant-logo.png" alt="header logo"></a>
+      </div>
+      <nav>
+        <menu>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Options <i class="fa-solid fa-arrow-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="shop.html">Food</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+        </menu>
+      </nav>
+    </header>
+    <section class="home-lesson-masthead">
+      <div>
+        <h1>Interface Components Part One</h1>
+      </div>
+    </section>
+    <main>
+      <section class="cta-row">
+        <div class="cta cta-lines">
+          <div class="cta-text">
+            <h3>Food</h3>
+            <i class="fa-solid fa-burger"></i>
+            <a href="shop.html">View Options</a>
+          </div>
+          <div class="line top"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+          <div class="line right"></div>
+        </div>
+        <div class="cta cta-lines">
+          <div class="cta-text">
+            <h3>Contact</h3>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <a href="contact.html">Find Us</a>
+          </div>
+          <div class="line top"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+          <div class="line right"></div>
+        </div>
+      </section>
+      <section class="contact-cta">
+        <h3>Contact Us</h3>
+        <button id="myBtn">Contact Us</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="" method="post">
+              <input type="text" placeholder="Name">
+              <br>
+              <input type="email" placeholder="Email">
+              <br>
+              <textarea placeholder="Your message ..."></textarea>
+              <br>
+              <input type="submit" value="Send">
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a href="index.html"><img src="./img/restaurant-logo-light.png" alt="footer logo"></a>
+      </div>
+      <div>
+        <h6>Footer Title</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet cumque dolorem doloribus fuga illum ipsum, iste maxime modi, molestiae nam neque nostrum numquam perspiciatis quae quia repellendus totam voluptatem. Consequuntur enim esse ipsam laudantium minima minus natus nobis praesentium provident, repellat reprehenderit sequi! Alias aliquid illum libero modi.</p>
+      </div>
+    </footer>
+  </body>
+</html>
