@@ -1,0 +1,231 @@
+/*
+colors
+black #1d1e1f rgb(29, 30, 31)
+purple #120527 rgb(18, 5, 39)
+light blue #008bf5 rgb(0, 139, 245)
+yellow #dbce43 rgb(219, 206, 67)
+turquoise #60e6c2 rgb(96, 230, 194)
+white #f6f4f5 rgb(246, 244, 245)
+ */
+ h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif;
+}
+ p,a,li,figcaption,td{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "head head head head"
+    "mast mast mast mast"
+    "main main main main"
+    "foot foot foot foot";
+    background-color: #f6f4f5;
+}
+/** header **/
+header{
+    grid-area: head;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(246, 244, 245, 0);
+    align-items: center;
+    transition: all .25s linear;
+}
+
+header div{
+    width: auto;
+    height: 100%;
+    flex-grow: 1;
+}
+
+header div img{
+    width: auto;
+    height: 100%;
+}
+
+header menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header menu li{
+    padding: 0px 10px;
+}
+
+header menu li a{
+    color: #f6f6f6;
+}
+
+
+/** header after scroll **/
+.scrolledHeader{
+    height: 75px;
+    background-color: rgba(246, 244, 245, 1);
+}
+
+.scrolledHeader a{
+    color: black;
+}
+
+
+/** masthead **/
+.lesson-masthead{
+    grid-area: mast;
+    background-image: url("../img/2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.lesson-masthead .mask{
+    background-color: rgba(29, 30, 31, .8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson-masthead .mask h1{
+    font-size: 4.5em;
+    color: #f6f4f5;
+    text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.lesson-masthead .arrow, .lesson-masthead .arrow::before{
+    position: absolute;
+    left: 50%;
+}
+
+.lesson-masthead .arrow{
+    width: 40px;
+    height: 40px;
+    top: 85%;
+    margin: -20px 0 0 20px;
+    border-left: none;
+    border-top: none;
+    border-right: 5px #fff solid;
+    border-bottom: 5px #fff solid;
+    transform: rotate(45deg);
+}
+
+.lesson-masthead .arrow::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+}
+/*
+    The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.
+ */
+@keyframes arrow {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+        transform: translate(-5px, -5px);
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(-10px, -10px);
+    }
+
+    
+}
+/** main **/
+main{
+    grid-area: main;
+
+}
+
+.lesson-row-1, .lesson-row-2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.lesson-row-1 div:nth-child(1){
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-position: bottom;
+    /* the clip path property creates a clipping region where content whitin it's visible, and conent outside it is invisible. Befor divinginto the details of clip-path, it's worth mentioning how the coordinat system works. The origin is the top-left corner with the x-axis pointing to the right and the y-axis pointing down. */
+    clip-path: polygon(76% 0, 100% 54%, 76% 100%, 0 100%, 0 0);
+}
+
+.lesson-row-1 div:nth-child(2){
+    padding: 10%;
+}
+
+.lesson-row-2 div:nth-child(2){
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    background-position: bottom;
+    clip-path: polygon(100% 0, 100% 100%, 20% 100%, 0 50%, 20% 1%);
+}
+
+.lesson-row-2 div:nth-child(1){
+    padding: 10%;
+}
+/** svg button **/
+.svg-btn{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    transition: 0.5s;
+}
+
+.svg-btn svg, .svg-btn svg rect{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    transition: 1s;
+}
+
+.svg-btn svg rect{
+    stroke: #120527;
+    stroke-width: 4px;
+    stroke-dasharray: 520;
+    stroke-dashoffset: 520;
+}
+
+.svg-btn:hover{
+    transition-delay: 1s;
+    background: #120527;
+    color: #f8f8f8;
+}
+
+.svg-btn:hover svg rect{
+    stroke-dashoffset: 0;
+}
+/** footer **/
+footer{
+    grid-area: footer;
+}

@@ -1,0 +1,112 @@
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    color: white;
+    background: linear-gradient(90deg, rgb(190, 33, 62) 0%, rgba(255,209,0,1) 100%); 
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    color: white;
+    
+}
+header h1{
+    height: min-content;
+    transition: ease-in;
+    animation: bigger 2s ease-in-out forwards;
+    animation-delay: 0.2s;
+    margin: 0;
+    padding: 0;
+}
+
+#rainbow{
+    /* the reason for the transition is because without it, it would be a very abrupt increase in font size for the span element */
+    transition: 1s ease-in-out;
+}
+#rainbow:hover{
+    font-size: 1.5em;
+    animation: shine 1s ease-in-out;text-transform: capitalize;
+}
+
+@keyframes shine{
+    0%{
+        
+        
+        color: green;
+    }
+    14%{
+        
+        color: blue;
+    }
+    28%{
+        
+        color: yellow;
+    }
+    42%{
+        
+        color: pink;
+    }
+    56%{
+        
+        color: purple;
+    }
+    70%{
+        
+        color: red;
+    }
+
+    84%{
+        
+        color: orange;
+    }
+    98%{
+        
+        color: cyan;
+    }
+    100%{
+        color: white;
+        
+    }
+    
+    
+
+
+}
+/* we gonna have a nice animation where the text gets larger on page load */
+@keyframes bigger{
+    0%{
+        opacity: 0;
+        font-size: 1em;
+    }
+    50%{
+        opacity: 1;
+        font-size: 4em;
+        
+    }
+    100%{
+        font-size: 3em;
+    }
+}
+
+section >*{
+    padding-left: 1.5em;
+    border: solid rgb(0, 255, 174);
+    margin-top: 2em;
+    padding-right: 1em;
+}
+
+section h3{
+    font-size: 1.5em;
+}
+
+section p{
+    font-size: 1.2em;
+}
