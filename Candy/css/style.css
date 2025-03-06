@@ -1,112 +1,236 @@
-
-html{
+html {
     width: 100%;
     height: 100%;
 }
-body{
+
+body {
     color: white;
-    background: linear-gradient(90deg, rgb(190, 33, 62) 0%, rgba(255,209,0,1) 100%); 
+    background-color: #be213e;
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 100vh;
     color: white;
-    
+    box-shadow: 3px 3px 10px black;
+    width: 100%;
+    background-image: url("../images/bg-image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-header h1{
+
+header h1 {
     height: min-content;
     transition: ease-in;
     animation: bigger 2s ease-in-out forwards;
     animation-delay: 0.2s;
     margin: 0;
-    padding: 0;
+    padding: 2em;
+    font-size: 3em;
 }
 
 #rainbow{
     /* the reason for the transition is because without it, it would be a very abrupt increase in font size for the span element */
     transition: 1s ease-in-out;
 }
-#rainbow:hover{
+
+#rainbow:hover {
     font-size: 1.5em;
-    animation: shine 1s ease-in-out;text-transform: capitalize;
+    animation: shine 1s ease-in-out;
+    text-transform: capitalize;
 }
 
-@keyframes shine{
-    0%{
-        
-        
+/* the shine keyframes are for the word rainbow just doing a simple font color change */
+@keyframes shine {
+    0% {
+
+
         color: green;
     }
-    14%{
-        
+    14% {
+
         color: blue;
     }
-    28%{
-        
+    28% {
+
         color: yellow;
     }
-    42%{
-        
+    42% {
+
         color: pink;
     }
-    56%{
-        
+    56% {
+
         color: purple;
     }
-    70%{
-        
+    70% {
+
         color: red;
     }
+    84% {
 
-    84%{
-        
         color: orange;
     }
-    98%{
-        
+    98% {
+
         color: cyan;
     }
-    100%{
+    100% {
         color: white;
-        
     }
-    
-    
-
-
 }
+
 /* we gonna have a nice animation where the text gets larger on page load */
-@keyframes bigger{
-    0%{
+@keyframes bigger {
+    0% {
         opacity: 0;
         font-size: 1em;
     }
-    50%{
+    50% {
         opacity: 1;
+        font-size: 6em;
+
+    }
+    100% {
         font-size: 4em;
-        
-    }
-    100%{
-        font-size: 3em;
     }
 }
 
-section >*{
-    padding-left: 1.5em;
-    border: solid rgb(0, 255, 174);
-    margin-top: 2em;
-    padding-right: 1em;
+/* Beginning of main */
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-section h3{
-    font-size: 1.5em;
+.parralax-1, .parralax-2{
+    z-index: -1;
+    width: 100%;
+    height: 20em;
+    background-image: url("../images/bg-image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#facts-section-header{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+    font-size: 2.5em;
+}
+/* for the the first section i want to have a 2 by 2 grid to keep things organaized */
+.facts-section {
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 1.5em;
+    justify-content: center;
+    padding: 2em 0 5em 0;
+    box-shadow: 3px black;
 }
 
-section p{
+.facts {
+    padding: 0.5em;
+    font-size: 1.3em;
+    background-color: #f7824b;
+    transition: 0.25s ease-in-out;
+}
+
+.facts:hover{
+    transform: scale(1.01);
+    box-shadow: 3px 3px 1px rgb(255, 225, 1);
+}
+
+.parralax-2{
+    background-image: url("../images/rainbow-bg.jpg");
+}
+
+/* Skittle images slideshow using bacground properties */
+.skittles{
+    height: 40em;
+    width: 70%;
+    background-size: cover;
+    align-self: center;
+    
+}
+
+.skittles-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    
+}
+
+.skittles{
+    animation: skittles 8s infinite linear;
+    border-radius: 2em;
+    border:  4px solid black;
+    box-shadow: 3px 3px px rgb(255, 225, 1);
+}
+
+.skittles-container h2{
+    font-size: 2.5em;
+}
+
+/* the animation is used to fade in and out of the different type of skittles */
+@keyframes skittles {
+   0%{
+    background-image: url("../images/original.jpg");
+   }
+    12.5%{
+    opacity: 0;
+   }
+   25%{
+    opacity: 1;
+    background-image: url("../images/colorless.png");
+   }
+   37.5%{
+    opacity: 0;
+   }
+   50%{
+    opacity: 1;
+    background-image: url("../images/sour.png");
+   }
+   62.5%{
+    opacity: 0;
+   }
+   75%{
+    opacity: 1;
+    background-image: url("../images/freezed.png");
+   }
+   87.5%{
+    opacity: 0;
+   }
+   100%{
+    opacity: 1;
+    background-image: url("../images/original.jpg");
+   }
+}
+
+footer{
+    margin-top: 5em;
+    padding: .2em 0;
     font-size: 1.2em;
+    width: 100%;
+    height: max-content;
+    background-color: #DC3655;
+    border-top: solid black;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-evenly;
 }
+/* making the image imore n line with the text footer  */
+footer img{
+   width: 10%;
+}
+
