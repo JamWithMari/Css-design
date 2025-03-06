@@ -1,125 +1,97 @@
 <!DOCTYPE html>
-
 <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A website made by Jamari charles for his love of skittles">
+      <title>Skittles</title>
+      <meta name="robots" content="noindex, nofollow">
+      <!-- css file -->
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- google fonts  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   </head>
+   <body>
 
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Skittles</title>
-
-    <link rel="stylesheet" href="./css/style.css">
-
-</head>
-
-
-<body>
-
-    <header>
-
-        <h1>Taste the <span id="rainbow">rainbow</span></h1>
-
-    </header>
-
-    <main>
-
-
-        </div>
-
-        <h2 id="facts-section-header">Interesting facts about skittles</h2>
-
-        <section class="facts-section">
-
-           
-
+      <header>
+         <h1>Taste the <span id="rainbow">rainbow</span></h1>
+      </header>
+      
+      <main>
+         <h2 id="facts-section-header">Interesting facts about skittles</h2>
+         <section class="facts-section">
             <div id="fact-1" class="facts">
-
-                <h3>The British Candy</h3>
-
-                <p>In the year 1970 the wrangler company introduced skittles to great britain, 4 years later in 1974 it
-
-                    was introduced into to the north american market </p>
-
+               <h3>The British Candy</h3>
+               <p>In the year 1970 the wrangler company introduced skittles to great britain, 4 years later in 1974 it
+                  was introduced into to the north american market 
+               </p>
             </div>
-
-
+            
             <div id="fact-2" class="facts">
-
-                <h3>Inventor Unkown</h3>
-
-                <p>Even though the candy was introduced to to the world through the wrangler company no one actually
-
-                    knows who was the original inventor of the candy. Many believe for it to</p>
-
+               <h3>Inventor Unknown</h3>
+               <p>Even though the candy was introduced to to the world through the wrangler company no one actually
+                  knows who was the original inventor of the candy. Many believe for it to
+               </p>
             </div>
-
-
+            
             <div id="fact-3" class="facts">
-
-                <h3>Vegan Candy</h3>
-
-                <p>Since 2009, Skittles no longer use gelatin that is derived from animals. Making them a perfect candy
-
-                    for Vegans</p>
-
-
+               <h3>Vegan Candy</h3>
+               <p>Since 2009, Skittles no longer use gelatin that is derived from animals. Making them a perfect candy
+                  for Vegans
+               </p>
             </div>
-
+            
             <div id="fact-4" class="facts">
-
-                <h3>Always more yellow</h3>
-
-                <p>Surprisingly there is always more yellow skittles inside the bag. Some say it has to do with colour
-
-                    balance</p>
-
+               <h3>Always more yellow</h3>
+               <p>Surprisingly there is always more yellow skittles inside the bag. Some say it has to do with colour
+                  balance
+               </p>
             </div>
-
-        </section>
-
-
-        <div class="parralax-1">
-
+         </section>
+        
+         <div class="parralax-1">
             <!--adding ay parralax to go into the nexxt section -->
-
-        </div>
-
-
-        <section class="skittles-container">
-
+         </div>
+        
+         <section class="skittles-container">
             <h2>Taste the rainbow in different ways</h2>
-
             <div class="skittles">
-
-                <!-- using css I'll add a backgroun image animation fading in and out of the different types of skittles -->
-
+               <!-- using css I'll add a backgroun image animation fading in and out of the different types of skittles -->
             </div>
-
-        </section>
-
-        <!-- adding another parralax to go into the nexxt section -->
-
-       <div class="parralax-2">
-
-        <h2>Nutrition facts</h2>
-
-       </div>
-
-    </main>
-
-
-    <footer>
-
-        <img src="./images/skittle-logo.png" alt="skittles logo">
-
-        <p>©2025 Mars or Affiliates. Third party trademarks are property of their respective owners.</p>
-
-    </footer>
-
-</body>
-
-
-</html> 
+         </section>
+         <!-- adding another parralax to go into the nexxt section -->
+         
+         <div class="parralax-2">
+            <h2>Nutritional Values</h2>
+         </div>
+         
+         <section id="nutrition">
+            <figure id="label-container">
+               <figcaption>The nutriion label is for a 7oz pack of skittles</figcaption>
+               <img src="./images/nutrition.jpg" alt="nutrition label for a 7oz pack of skittles" id="label">
+            </figure>
+         </section>
+      </main>
+     
+      <footer>
+        
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+               <label for="message">Message:</label>
+               <textarea id="message" name="message" rows="4" required></textarea>
+               <button type="submit">Submit</button>
+            </form>
+         </div>
+         
+         <img src="./images/skittle-logo.png" alt="skittles logo">
+         <p>©2025 Mars or Affiliates. Third party trademarks are property of their respective owners.</p>
+      </footer>
+   </body>
+</html>
