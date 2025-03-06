@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: "Poppins", sans-serif;
     font-style: italic;
 }
-p,a,li,figcaption,td{
+p,a,li,figcaption,td, label{
     font-family: "Roboto", sans-serif;
 }
 header {
