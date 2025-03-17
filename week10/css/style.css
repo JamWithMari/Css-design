@@ -1,0 +1,28 @@
+html{scroll-behavior: smooth;}
+body{
+  margin: 0;
+  background-color: #F1FAEE;
+}
+h1,h2,h3,h4,h5,h6,th{font-family: "Poppins", sans-serif;}
+p,a,li,td,figcaption,span{
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+/** Button **/
+
+/** Header **/
+
+/** Header on Scroll **/
+
+/** Menu List Hover **/
+
+/** Scrolled header list hover **/
+
+/** Masthead **/
+
+/** Main **/
+
+/** animations for Section 2, we will also be using jQuery for the trigger **/
+
+/** Section three **/
