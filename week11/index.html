@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Week 11 | Mobile Design</title>
+  <meta name="description" content="This lesson we will explore the mobile first approach.">
+  <meta name="robots" content="noindex, nofollow">
+  <!--  Add our CSS file  -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- Desktop Header -->
+    <div class="desktop-nav">
+      <div class="logo-container">
+        <a href="index.html"><img src="./img/sample-logo.png" alt="sample logo"></a>
+      </div>
+      <nav>
+        <menu>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#svg-examples">SVGs</a></li>
+          <li><a href="#drop-shadow">Drop Shadows</a></li>
+        </menu>
+      </nav>
+    </div>
+    <div class="mobile-nav">
+      <input id="burger" type="checkbox">
+      <label for="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <div>
+          <a href="index.html"><img src="./img/sample-logo.png" alt="header logo"></a>
+        </div>
+        <menu>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+        </menu>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="video-masthead">
+      <video id="background-video" autoplay loop muted poster="./img/video-still.jpg">
+        <source src="./video/water-video.mp4" type="video/mp4">
+      </video>
+      <h1>Interface Design for Mobile</h1>
+    </section>
+    <section class="introduction">
+      <h2>Introduction</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ea esse harum ipsum maiores minima qui quo recusandae sit, tempora. Adipisci aliquam assumenda culpa delectus doloremque doloribus dolorum et eum explicabo id illo illum itaque laboriosam magni neque pariatur, quaerat quisquam quo tempore vero vitae voluptas voluptate? Cum est fuga pariatur perferendis possimus provident quisquam repellat, sequi! A ad commodi dignissimos distinctio dolores expedita incidunt inventore laudantium, molestias necessitatibus nesciunt optio perferendis perspiciatis, quibusdam quos.</p>
+      <div class="btn-container-1">
+        <a href="#" class="btn btn-1">
+          <svg>
+            <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+          </svg>
+          Hover
+        </a>
+      </div>
+    </section>
+    <section class="table-row">
+      <table>
+        <thead>
+        <tr>
+          <th><h4>Sites</h4></th>
+          <th><h4>Views</h4></th>
+          <th><h4>Clicks</h4></th>
+          <th><h4>Average</h4></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Site A</td>
+          <td>9518</td>
+          <td>6369</td>
+          <td>01:32:50</td>
+        </tr>
+        <tr>
+          <td>Site B</td>
+          <td>7326</td>
+          <td>10437</td>
+          <td>00:51:22</td>
+        </tr>
+        <tr>
+          <td>Site C</td>
+          <td>4162</td>
+          <td>5327</td>
+          <td>00:24:34</td>
+        </tr>
+        <tr>
+          <td>Site D</td>
+          <td>3654</td>
+          <td>2961</td>
+          <td>00:12:10</td>
+        </tr>
+        <tr>
+          <td>Site E</td>
+          <td>2002</td>
+          <td>4135</td>
+          <td>00:46:19</td>
+        </tr>
+        <tr>
+          <td>Site F</td>
+          <td>4623</td>
+          <td>3486</td>
+          <td>00:31:52</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="contact-CTA">
+      <h3>We Want To Hear From You!</h3>
+      <button id="modalBtn">Contact Us</button>
+      <!-- The Modal -->
+      <div id="ContactModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form action="somefile.php" method="post">
+            <h4>Let's Chat</h4>
+            <div>
+              <input type="text" name="fname" placeholder="First Name">
+            </div>
+            <div>
+              <input type="text" name="lname" placeholder="Last Name">
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Your Email">
+            </div>
+            <div>
+              <textarea name="message" placeholder="Leave a message ..."></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Submit" name="submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+      // Make our popup form
+      // Get the modal
+      var modal = document.getElementById("ContactModal");
+      // Get the button that opens the modal
+      var btn = document.getElementById("modalBtn");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks on the button, open the modal
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
+</body>
+</html>
