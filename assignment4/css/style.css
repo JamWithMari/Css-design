@@ -49,6 +49,13 @@ header nav menu a:hover {
 
 }
 
+header nav svg {
+    display: none;
+    fill: #f4f4f4;
+    /* Change color to white */
+}
+
+
 /*Removing the border form the last child in this case contacts from the navbar*/
 header nav menu li:last-child a {
     border: none;
@@ -86,14 +93,14 @@ body {
 
 }
 
-.mast-head h1{
+.mast-head h1 {
     text-shadow: #0e0e0e 2px 2px;
     color: #ffffff;
     position: absolute;
     top: 20%;
 }
 
-.mast-head .arrow{
+.mast-head .arrow {
     width: 0.8em;
     height: 0.8em;
     border-left: 5px solid #f4f4f4;
@@ -157,7 +164,7 @@ body {
 .cta-2 h3:hover {
     background-color: #f4f4f4;
     color: #072d67;
-    
+
 }
 
 .row-2 {
@@ -229,6 +236,7 @@ body {
     border-radius: 0.5em;
     color: white;
 }
+
 /* putting the form in the center of the section */
 .row-4 {
     display: flex;
@@ -248,11 +256,12 @@ body {
     height: 280px;
     padding: 0.25em;
 }
+
 /* removing the border radius form all children elements of the form  and setting font color to black*/
 .row-4 form>* {
     border-radius: 0;
     color: #0e0e0e;
-    
+
 }
 
 .row-4 form input::placeholder {
@@ -267,6 +276,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* targetting the email input field */
 .row-4 form input:nth-child(3) {
     grid-column: span 2;
@@ -274,6 +284,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* styling for the textbox in the form */
 #msg {
     grid-column: span 2;
@@ -288,6 +299,7 @@ body {
     font-weight: bold;
     color: #0e0e0e;
 }
+
 /* styling for the submit button in the form */
 .row-4 form button {
     background-color: #5e35b1;
@@ -314,45 +326,55 @@ footer {
     margin-bottom: 2em;
 }
 
-footer img{
+footer img {
     width: 24.1%;
     height: auto;
 }
 
-footer p{
+footer p {
     font-size: 1.3em;
 
 }
+
 /* Mobile design */
 @media screen and (max-width: 768px) {
-    body{
+    body {
         width: 100vw;
     }
-   header nav{
-       display: none; 
-   }
-   
-   .mast-head h1{
-        text-shadow: #0e0e0e 2px 2px ;
+
+    header nav menu {
+        display: none;
+    }
+
+    header nav svg {
+        display: inline;
+        
+    }
+
+    .mast-head h1 {
+        text-shadow: #0e0e0e 2px 2px;
         color: #ffffff;
         font-size: 0.8em;
         position: absolute;
         top: 20%;
-   }
-   .row-3{
-        padding: 2em 0;  
-   }
-   .cta-container,.hover-container{
+    }
+
+    .row-3 {
+        padding: 2em 0;
+    }
+
+    .cta-container,
+    .hover-container {
         display: flex;
         flex-direction: column;
-   }
+    }
 
-   .hover:nth-of-type(1){
-    margin-bottom: 2em;
-   }
-   
-    
+    .hover:nth-of-type(1) {
+        margin-bottom: 2em;
+    }
 
-    
-    
+
+
+
+
 }
